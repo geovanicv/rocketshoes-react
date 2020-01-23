@@ -8,14 +8,23 @@ function* addToCart({ id }) {
   // acessa api, busca detalhes e cadastra - interceptor da action
 
   // verificar se o produto ja nao está no carrinho - select
-
   const productExists = yield select(state =>
     state.cart.find(p => p.id === id)
   );
 
-  if (productExists) {
-    const amount = productExists.amount + 1;
+  // verificando stoque
+  const stock = yield call(api.get, `/stock/${id}`);
+  const stockAmount = stock.data.amount;
+  const currentAmount = productExists ? productExists.amount : 0;
 
+  const amount = currentAmount + 1;
+
+  if (amount > stockAmount) {
+    console.tron.warn('ERRO');
+    return;
+  }
+
+  if (productExists) {
     yield put(updateAmount(id, amount));
   } else {
     const response = yield call(api.get, `/products/${id}`);
