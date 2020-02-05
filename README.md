@@ -6,11 +6,11 @@
   Desafio 7: Arquitetura Flux
 </h3>
 
-...
+Aplicação e-commerce Rocketshoes
 
 <h1 align="center">
-    <img alt="GoStack" src="screenshots/tela1.PNG" width="771px" height="450px" />
-    <img alt="GoStack" src="screenshots/tela2.PNG" width="771px" height="450px" />
+    <img alt="GoStack" src="screenshots/tela1.PNG"  />
+    <img alt="GoStack" src="screenshots/tela2.PNG"  />
 </h1>
 
 ## :rocket: Tecnologias
@@ -45,6 +45,9 @@ $ cd rocketshoes-react
 
 # Instale as dependências
 $ yarn install
+
+# Dê o start na API
+$ json-server server.json -p 3333
 
 # Execute o app
 $ yarn start
