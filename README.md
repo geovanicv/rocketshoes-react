@@ -3,13 +3,14 @@
 </h1>
 
 <h3>
-  Desafio 7: Arquitetura Flux 
+  Desafio 7: Arquitetura Flux
 </h3>
 
 ...
 
 <h1 align="center">
-    <img alt="GoStack" src="#" width="771px" height="450px" />
+    <img alt="GoStack" src="screenshots/tela1.PNG" width="771px" height="450px" />
+    <img alt="GoStack" src="screenshots/tela2.PNG" width="771px" height="450px" />
 </h1>
 
 ## :rocket: Tecnologias
